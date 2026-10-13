@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" role="img" aria-label="copper">
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FCE9D9"/><stop offset="1" stop-color="#F2BF96"/></linearGradient>
+<linearGradient id="metal" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E5E9EE"/><stop offset=".5" stop-color="#9AA5B1"/><stop offset="1" stop-color="#5F6B78"/></linearGradient>
+<linearGradient id="copper" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F6B07A"/><stop offset=".5" stop-color="#D9772F"/><stop offset="1" stop-color="#9A4A14"/></linearGradient>
+<linearGradient id="brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FBE08A"/><stop offset=".5" stop-color="#E0B23C"/><stop offset="1" stop-color="#A97D16"/></linearGradient>
+</defs>
+<rect width="600" height="420" fill="url(#bg)"/>
+<circle cx="500" cy="70" r="150" fill="#fff" opacity=".25"/>
+<circle cx="70" cy="380" r="120" fill="#fff" opacity=".18"/>
+<ellipse cx="300" cy="372" rx="230" ry="22" fill="#000" opacity=".14"/>
+<ellipse cx="190" cy="250" rx="120" ry="74.4" fill="none" stroke="url(#copper)" stroke-width="16"/><ellipse cx="190" cy="250" rx="104" ry="64.48" fill="none" stroke="url(#copper)" stroke-width="16"/><ellipse cx="190" cy="250" rx="88" ry="54.56" fill="none" stroke="url(#copper)" stroke-width="16"/><ellipse cx="190" cy="250" rx="72" ry="44.64" fill="none" stroke="url(#copper)" stroke-width="16"/><ellipse cx="190" cy="250" rx="56" ry="34.72" fill="none" stroke="url(#copper)" stroke-width="16"/><ellipse cx="190" cy="250" rx="34" ry="21" fill="#7A3A10"/><path d="M80 250 Q190 185 300 250" fill="none" stroke="#fff" stroke-width="5" opacity=".28" stroke-linecap="round"/><rect x="330" y="200" width="200" height="38" rx="19" fill="url(#copper)" stroke="#8A4210" stroke-width="2"/><ellipse cx="530" cy="219" rx="10" ry="19" fill="#7A3A10"/><rect x="345" y="207" width="150" height="6" rx="3" fill="#fff" opacity=".35"/><rect x="330" y="255" width="200" height="38" rx="19" fill="url(#copper)" stroke="#8A4210" stroke-width="2"/><ellipse cx="530" cy="274" rx="10" ry="19" fill="#7A3A10"/><rect x="345" y="262" width="150" height="6" rx="3" fill="#fff" opacity=".35"/><rect x="330" y="310" width="200" height="38" rx="19" fill="url(#copper)" stroke="#8A4210" stroke-width="2"/><ellipse cx="530" cy="329" rx="10" ry="19" fill="#7A3A10"/><rect x="345" y="317" width="150" height="6" rx="3" fill="#fff" opacity=".35"/>
+</svg>
