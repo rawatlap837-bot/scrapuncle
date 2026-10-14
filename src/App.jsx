@@ -3,7 +3,6 @@ import Hero from './components/Hero.jsx'
 import HowItWorks from './components/HowItWorks.jsx'
 import WhyChoose from './components/WhyChoose.jsx'
 import Services from './components/Services.jsx'
-import Rates from './components/Rates.jsx'
 import Faq from './components/Faq.jsx'
 import Cta from './components/Cta.jsx'
 import Contact from './components/Contact.jsx'
@@ -23,7 +22,6 @@ export default function App() {
           <HowItWorks />
           <WhyChoose />
           <Services />
-          <Rates />
           <Faq />
           <Cta />
           <Contact />

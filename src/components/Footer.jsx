@@ -11,7 +11,7 @@ export default function Footer() {
         <div>
           <h2 className="mb-3 text-base font-semibold">Explore</h2>
           <ul className="space-y-1">
-            {[['#how-it-works', 'How it works'], ['#why-us', 'Why choose us'], ['#services', 'What we collect'], ['#rates', 'Rates'], ['#faq', 'FAQ']].map(([h, l]) => (
+            {[['#how-it-works', 'How it works'], ['#why-us', 'Why choose us'], ['#services', 'What we collect'], ['#faq', 'FAQ']].map(([h, l]) => (
               <li key={h}><a href={h} className="inline-flex min-h-[44px] items-center hover:underline">{l}</a></li>
             ))}
           </ul>

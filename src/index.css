@@ -65,6 +65,18 @@ a, button, input, select, textarea { font-family: inherit; }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity 600ms ease-out, transform 600ms ease-out; }
 .reveal.is-in { opacity: 1; transform: none; }
 
+@media (max-width: 767px) {
+  .timeline-step:not(:last-child)::after {
+    content: ''; position: absolute; left: 43px; top: 72px;
+    bottom: -22px; width: 2px; background: #bbdfc4;
+    transform: scaleY(0); transform-origin: top;
+    transition: transform 800ms ease-out 300ms;
+  }
+  .timeline-step.is-in::after { transform: scaleY(1); }
+  .timeline-step.is-in .timeline-icon { animation: timelineIconIn 600ms ease-out both; }
+}
+@keyframes timelineIconIn { from { transform: scale(0.85); } to { transform: scale(1); } }
+
 .nav-link { position: relative; }
 .nav-link::after {
   content: ''; position: absolute; left: 0; bottom: -4px; height: 2px; width: 100%;
@@ -81,6 +93,7 @@ a, button, input, select, textarea { font-family: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition-duration: 1ms !important; }
   .reveal { opacity: 1; transform: none; }
+  .timeline-step:not(:last-child)::after { transform: scaleY(1); }
 }
 
 .hero-green { background: linear-gradient(135deg, #0A4D2E 0%, #0F7A43 55%, #22B35E 100%); }

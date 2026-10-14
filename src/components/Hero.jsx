@@ -1,73 +1,54 @@
-import { ArrowRight, Play, Recycle, Truck, Scale, Banknote, BadgeIndianRupee, Leaf } from 'lucide-react'
-import Button, { CircleButton } from './ui/Button.jsx'
+﻿import { ArrowRight, Recycle, Truck, Scale, Banknote, Leaf, Check } from 'lucide-react'
+import Button from './ui/Button.jsx'
 
 export default function Hero() {
   return (
-    <section id="top" className="gutter mx-auto max-w-[1200px] pt-2">
-      <div className="relative flex min-h-[520px] flex-col justify-center overflow-hidden rounded-hero hero-green text-white p-6 sm:p-10 md:min-h-[480px] lg:h-[560px] lg:p-0">
-        {/* Decorative depth layers (CSS-built, no photo) */}
-        <div aria-hidden="true" className="absolute -right-24 -top-24 h-[420px] w-[420px] rounded-full bg-white/10" />
-        <div aria-hidden="true" className="absolute -bottom-32 right-24 h-[360px] w-[360px] rounded-full bg-white/10" />
-        <div aria-hidden="true" className="drift absolute right-10 top-12 hidden h-56 w-56 items-center justify-center rounded-full bg-white shadow-lg2 md:flex lg:right-24 lg:top-20 lg:h-72 lg:w-72">
-          <Truck size={112} strokeWidth={2} className="text-accent-hover" />
-        </div>
-        <div aria-hidden="true" className="glass z-10 absolute right-[27rem] top-[250px] text-text-main hidden items-center gap-2 rounded-chip px-4 py-2 text-sm font-semibold lg:flex">
-          <Banknote size={20} className="text-success" /> Instant payment
-        </div>
-        <div aria-hidden="true" className="glass z-10 absolute right-8 top-[330px] text-text-main hidden items-center gap-2 rounded-chip px-4 py-2 text-sm font-semibold md:flex lg:right-12">
-          <Recycle size={20} className="text-success" /> Fair rates
-        </div>
-
-        <div aria-hidden="true" className="absolute left-8 top-1/2 hidden -translate-y-1/2 flex-col items-center lg:flex">
-          {[1, 2, 3].map((n, i) => (
-            <div key={n} className="flex flex-col items-center">
-              <span className={`flex h-8 w-8 items-center justify-center rounded-full text-sm font-semibold ${i === 0 ? 'bg-white text-text-main' : 'border border-white/60 text-white'}`}>{n}</span>
-              {i < 2 && <span className="h-8 w-px bg-white/40" />}
-            </div>
-          ))}
-        </div>
-
-        <div className="relative max-w-[640px] lg:pl-16">
-          <p className="fade-up mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-green-200">Free doorstep pickup</p>
-          <h1 className="h1">
-            <span className="fade-up block">Turn your scrap</span>
-            <span className="fade-up block" style={{ animationDelay: '100ms' }}>into cash</span>
-            <span className="fade-up block" style={{ animationDelay: '200ms' }}>today.</span>
-          </h1>
-          <p className="fade-up mt-5 text-lg font-medium" style={{ animationDelay: '300ms' }}>
-            Free doorstep pickup. Fair rates. Instant payment.
-          </p>
-          <ul className="fade-up mt-5 flex flex-wrap gap-2" style={{ animationDelay: '350ms' }}>
-            <li className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-text-main">
-              <BadgeIndianRupee aria-hidden="true" size={18} className="text-accent-hover" /> Fair price
-            </li>
-            <li className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-text-main">
-              <Leaf aria-hidden="true" size={18} className="text-accent-hover" /> Environment friendly
-            </li>
-          </ul>
-          <div className="fade-up mt-8 flex items-center gap-3" style={{ animationDelay: '400ms' }}>
-            <Button variant="cta" href="#contact">Book pickup</Button>
-            <CircleButton label="See how it works" href="#how-it-works"><Play aria-hidden="true" size={20} /></CircleButton>
-          </div>
-        </div>
-
-        <div className="notched relative text-text-main mt-8 flex flex-col gap-3 rounded-card bg-white p-5 lg:absolute lg:bottom-0 lg:right-0 lg:mt-0 lg:w-80 lg:p-6 lg:pl-8">
-          <a href="#why-us" className="inline-flex min-h-[44px] items-center justify-between text-sm font-semibold">
-            Know More <ArrowRight aria-hidden="true" size={20} />
-          </a>
-          <div className="flex items-center">
-            {[Recycle, Truck, Scale].map((Icon, i) => (
-              <span key={i} aria-hidden="true" className={`flex h-10 w-10 items-center justify-center rounded-full border-2 border-white bg-accent-soft text-accent-hover ${i ? '-ml-3' : ''}`}>
-                <Icon size={20} />
-              </span>
-            ))}
-          </div>
+    <section id="top" aria-labelledby="hero-title" className="gutter mx-auto max-w-[1200px] pt-2">
+      <div className="hero-green relative isolate overflow-hidden rounded-[28px] px-5 py-7 text-white sm:rounded-hero sm:p-10 lg:p-14">
+        <div aria-hidden="true" className="pointer-events-none absolute -right-36 -top-36 h-[520px] w-[520px] rounded-full border-[70px] border-white/5" />
+        <div aria-hidden="true" className="pointer-events-none absolute -bottom-64 left-1/3 h-[460px] w-[460px] rounded-full bg-white/5" />
+        <div className="relative grid items-center gap-6 lg:min-h-[440px] lg:grid-cols-[1.15fr_1fr] lg:gap-12">
           <div>
-            <p className="font-semibold">Digital weighing scales</p>
-            <p className="text-xs text-text-muted">Accurate, transparent weight.</p>
+            <p className="fade-up mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.07em] sm:text-xs">
+              <span className="h-2 w-2 rounded-full bg-green-300" /> Doorstep pickup in Delhi NCR
+            </p>
+            <h1 id="hero-title" className="fade-up text-[38px] font-bold leading-[1.06] tracking-[-0.04em] sm:text-[52px] lg:text-[60px]">
+              Turn your scrap<br />into <span className="text-[#c9f5a6]">cash.</span>
+            </h1>
+            <p className="fade-up mt-4 max-w-[440px] text-[15px] leading-6 sm:mt-6 sm:leading-7 text-green-50/90 sm:text-lg" style={{ animationDelay: '100ms' }}>
+              We collect, weigh and pay at your doorstep. Clear your space without the hassle.
+            </p>
+            <div className="fade-up mt-6 flex flex-col gap-2 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3" style={{ animationDelay: '200ms' }}>
+              <Button variant="cta" href="#contact" className="w-full !px-5 sm:w-auto">Book free pickup <ArrowRight aria-hidden="true" size={18} /></Button>
+              <a href="#how-it-works" className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-3 text-sm font-semibold text-green-50 hover:bg-white/10">How it works <ArrowRight aria-hidden="true" size={16} /></a>
+            </div>
+            <ul className="fade-up mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t border-white/15 pt-4 text-[11px] sm:mt-7 font-medium text-green-100 sm:text-sm" style={{ animationDelay: '300ms' }}>
+              {['Free pickup', 'Digital weighing', 'Instant payment'].map(item => <li key={item} className="inline-flex items-center gap-1.5"><Check aria-hidden="true" size={16} className="text-green-300" />{item}</li>)}
+            </ul>
+          </div>
+          <div className="relative mx-auto w-full max-w-[410px]">
+            <div className="relative rounded-[24px] border border-white/20 bg-white/10 p-2 sm:rounded-[32px] shadow-[0_20px_70px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:p-7">
+              <div className="hidden items-center justify-between gap-3 text-xs font-semibold text-green-100 sm:flex">
+                <span className="inline-flex items-center gap-2"><Recycle aria-hidden="true" size={18} /> A fresh start for your scrap</span>
+                <Leaf aria-hidden="true" size={20} />
+              </div>
+              <div aria-hidden="true" className="relative hidden h-[220px] items-center justify-center sm:flex">
+                <div className="absolute h-36 w-36 rounded-full border border-white/15 sm:h-44 sm:w-44" />
+                <div className="absolute h-28 w-28 rounded-full bg-[#c9f5a6]/10 sm:h-36 sm:w-36" />
+                <Truck className="drift relative h-24 w-24 text-[#c9f5a6] sm:h-28 sm:w-28" strokeWidth={1.5} />
+              </div>
+              <div className="rounded-2xl bg-white p-4 text-text-main sm:p-5">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent-hover"><Scale aria-hidden="true" size={23} /></span>
+                  <div><p className="text-sm font-bold">Weighed right in front of you</p><p className="mt-1 text-xs leading-5 text-text-muted">A clear quote. You decide before we collect.</p></div>
+                </div>
+                <div className="mt-4 flex items-center gap-2 border-t border-line pt-3 text-xs font-semibold text-accent-hover"><Banknote aria-hidden="true" size={18} /> Payment on the spot</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
   )
 }
+
