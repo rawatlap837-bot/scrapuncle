@@ -1,4 +1,4 @@
-﻿import { ArrowRight, Recycle, Truck, Scale, Banknote, Leaf, Check } from 'lucide-react'
+import { ArrowRight, Recycle, Truck, Leaf, Check } from 'lucide-react'
 import Button from './ui/Button.jsx'
 
 export default function Hero() {
@@ -37,12 +37,14 @@ export default function Hero() {
                 <div className="absolute h-28 w-28 rounded-full bg-[#c9f5a6]/10 sm:h-36 sm:w-36" />
                 <Truck className="drift relative h-24 w-24 text-[#c9f5a6] sm:h-28 sm:w-28" strokeWidth={1.5} />
               </div>
-              <div className="rounded-2xl bg-white p-4 text-text-main sm:p-5">
-                <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent-hover"><Scale aria-hidden="true" size={23} /></span>
-                  <div><p className="text-sm font-bold">Weighed Right In Front Of You</p><p className="mt-1 text-xs leading-5 text-text-muted">A Clear Quote. You Decide Before We Collect.</p></div>
-                </div>
-                <div className="mt-4 flex items-center gap-2 border-t border-line pt-3 text-xs font-semibold text-accent-hover"><Banknote aria-hidden="true" size={18} /> Payment On The Spot</div>
+              <div className="overflow-hidden rounded-2xl border border-white/20 bg-white/10">
+                <img
+                  src="/images/SohilAlvi.png"
+                  alt="Sohil Alvi"
+                  className="h-[240px] w-full object-cover object-top sm:h-[280px]"
+                  width="1060"
+                  height="1500"
+                />
               </div>
             </div>
           </div>

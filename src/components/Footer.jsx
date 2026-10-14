@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className="gutter border-t border-line bg-white pb-24 pt-14 md:pb-10">
       <div className="mx-auto grid max-w-[1200px] gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="flex items-center gap-2 text-lg font-bold"><Recycle aria-hidden="true" size={24} className="text-success" />[Brand name]</p>
+          <p className="flex items-center gap-2 text-lg font-bold"><Recycle aria-hidden="true" size={24} className="shrink-0 text-success" /><span className="whitespace-nowrap">Kabadi Wale Uncle</span></p>
           <p className="mt-3 text-text-muted">Turn Your Scrap Into Cash Today. Free Doorstep Pickup.</p>
         </div>
         <div>
@@ -31,7 +31,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="mx-auto mt-10 flex max-w-[1200px] flex-col justify-between gap-2 border-t border-line pt-6 text-sm text-text-muted sm:flex-row">
-        <p>© {new Date().getFullYear()} [Brand name]</p>
+        <p>© {new Date().getFullYear()} Kabadi Wale Uncle</p>
         <p className="flex gap-4">
           <a href="#top" className="inline-flex min-h-[44px] items-center hover:underline">Privacy</a>
           <a href="#top" className="inline-flex min-h-[44px] items-center hover:underline">Terms</a>

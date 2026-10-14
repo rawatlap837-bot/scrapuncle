@@ -1,4 +1,4 @@
-import { ArrowRight, BadgeIndianRupee, Leaf } from 'lucide-react'
+import { BadgeIndianRupee, Leaf } from 'lucide-react'
 import Reveal from './Reveal.jsx'
 
 const items = [
@@ -13,10 +13,10 @@ const items = [
   { slug: 'computer', title: 'Computer', text: 'Used Computers, Monitors, And Parts.', eco: 'Recycled Responsibly' },
 ]
 
-function CollectionCards({ duplicate = false }) {
+function CollectionCards() {
   return items.map(({ slug, title, text, eco }) => (
     <li key={slug} className="collect-slide w-[min(82vw,320px)] shrink-0 sm:w-[min(42vw,340px)] lg:w-[340px]">
-      <a href="#contact" tabIndex={duplicate ? -1 : undefined} aria-label={`${title}: Get A Quote`} className="group flex h-full flex-col overflow-hidden rounded-card bg-surface-alt transition duration-[250ms] ease-out hover:-translate-y-1 hover:shadow-lg2">
+      <article className="group flex h-full flex-col overflow-hidden rounded-card bg-surface-alt transition duration-[250ms] ease-out hover:-translate-y-1 hover:shadow-lg2">
         <div className="img-zoom relative aspect-[3/2] overflow-hidden bg-sky-tint">
           <img
             src={`/images/collect/${slug}.jpg`}
@@ -39,11 +39,8 @@ function CollectionCards({ duplicate = false }) {
           <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-medium text-accent-hover">
             <Leaf aria-hidden="true" size={16} /> {eco}
           </p>
-          <span className="mt-auto inline-flex items-center gap-1 pt-4 text-sm font-semibold text-accent-hover">
-            Get A Quote <ArrowRight aria-hidden="true" size={20} className="transition-transform duration-200 group-hover:translate-x-1" />
-          </span>
         </div>
-      </a>
+      </article>
     </li>
   ))
 }
@@ -66,7 +63,7 @@ export default function Services() {
                 <CollectionCards />
               </ul>
               <ul className="collect-track-group flex shrink-0 gap-5 pr-5" aria-hidden="true">
-                <CollectionCards duplicate />
+                <CollectionCards />
               </ul>
             </div>
           </div>

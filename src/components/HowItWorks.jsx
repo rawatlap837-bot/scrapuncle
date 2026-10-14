@@ -13,9 +13,9 @@ export default function HowItWorks() {
       <div className="gutter mx-auto max-w-[1200px]">
         <Reveal>
           <div className="mx-auto mb-10 max-w-[640px] text-center lg:mb-14">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-accent-hover">How It Works</p>
-            <h2 id="how-title" className="h2">Pickup In 3 Simple Steps</h2>
-            <p className="mt-4 text-text-muted">No Shop Visits, No Hassle. We Come To You.</p>
+            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-accent-hover">Pickup And Get Paid</p>
+            <h2 id="how-title" className="h2">In 3 Simple Steps</h2>
+            <p className="mt-4 text-text-muted">We Make Scrap Recycling Simple And Help Give Reusable Materials A Second Life.</p>
           </div>
         </Reveal>
         <ol className="pickup-timeline relative grid gap-5 md:grid-cols-3 md:gap-6">

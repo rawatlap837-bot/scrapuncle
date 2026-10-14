@@ -25,7 +25,7 @@ export default function Navbar() {
       <nav aria-label="Main" className="gutter relative mx-auto flex h-16 max-w-[1200px] items-center justify-between md:h-[72px]">
         <a href="#top" className="flex min-h-[44px] items-center gap-2 text-lg font-bold">
           <Recycle aria-hidden="true" size={24} className="text-success" />
-          <span>[Brand name]</span>
+          <span className="whitespace-nowrap text-base sm:text-lg">Kabadi Wale Uncle</span>
         </a>
         <ul className="hidden items-center gap-10 nav:flex">
           {links.map((l) => (

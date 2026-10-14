@@ -103,12 +103,18 @@ a, button, input, select, textarea { font-family: inherit; }
 @keyframes collectionLoop {
   to { transform: translateX(-50%); }
 }
-.collect-viewport { overflow: hidden; }
+.collect-viewport {
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+}
+.collect-viewport::-webkit-scrollbar { display: none; }
 .collect-track { animation: collectionLoop 58s linear infinite; will-change: transform; }
 .collect-viewport:hover .collect-track,
 .collect-viewport:focus-within .collect-track { animation-play-state: paused; }
 @media (prefers-reduced-motion: reduce) {
   .collect-track { animation: none !important; }
   .collect-track-group[aria-hidden="true"] { display: none; }
-  .collect-viewport { overflow-x: auto; scrollbar-width: thin; }
 }
