@@ -3,9 +3,9 @@ import { Menu, X, Recycle, Phone } from 'lucide-react'
 import Button from './ui/Button.jsx'
 
 const links = [
-  { href: '#how-it-works', label: 'How it works' },
-  { href: '#why-us', label: 'Why us' },
-  { href: '#services', label: 'What we collect' },
+  { href: '#how-it-works', label: 'How It Works' },
+  { href: '#why-us', label: 'Why Us' },
+  { href: '#services', label: 'What We Collect' },
   { href: '#faq', label: 'FAQ' },
   { href: '#contact', label: 'Contact' },
 ]
@@ -34,8 +34,8 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-        <Button variant="dark" href="tel:+919876543210" className="hidden !h-10 !px-5 !text-sm nav:inline-flex">
-          Call now
+        <Button variant="dark" href="tel:+918882343340" className="hidden !h-10 !px-5 !text-sm nav:inline-flex">
+          Call Now
         </Button>
         <button
           type="button"
@@ -56,8 +56,8 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <Button variant="dark" href="tel:+919876543210" className="mt-2 w-full">
-              <Phone aria-hidden="true" size={20} /> Call now
+            <Button variant="dark" href="tel:+918882343340" className="mt-2 w-full">
+              <Phone aria-hidden="true" size={20} /> Call Now
             </Button>
           </div>
         )}

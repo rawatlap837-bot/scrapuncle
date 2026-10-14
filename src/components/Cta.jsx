@@ -12,12 +12,12 @@ export default function Cta() {
               <Truck size={30} strokeWidth={1.8} />
             </span>
             <div>
-              <h2 id="cta-title" className="text-[26px] font-bold leading-tight tracking-[-0.025em] sm:text-[32px]">Ready to clear some space?</h2>
-              <p className="mt-2 text-sm leading-6 text-text-muted sm:text-base">Free doorstep scrap pickup across Delhi NCR.</p>
+              <h2 id="cta-title" className="text-[26px] font-bold leading-tight tracking-[-0.025em] sm:text-[32px]">Ready To Clear Some Space?</h2>
+              <p className="mt-2 text-sm leading-6 text-text-muted sm:text-base">Free Doorstep Scrap Pickup Across Delhi NCR.</p>
             </div>
           </div>
           <Button href="#contact" variant="dark" className="w-full shrink-0 !px-6 md:w-auto">
-            Book free pickup <ArrowRight aria-hidden="true" size={18} />
+            Book Free Pickup <ArrowRight aria-hidden="true" size={18} />
           </Button>
         </Reveal>
       </div>

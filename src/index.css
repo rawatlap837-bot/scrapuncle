@@ -99,3 +99,16 @@ a, button, input, select, textarea { font-family: inherit; }
 .hero-green { background: linear-gradient(135deg, #0A4D2E 0%, #0F7A43 55%, #22B35E 100%); }
 .img-zoom img { transition: transform 500ms ease-out; }
 .group:hover .img-zoom img { transform: scale(1.05); }
+
+@keyframes collectionLoop {
+  to { transform: translateX(-50%); }
+}
+.collect-viewport { overflow: hidden; }
+.collect-track { animation: collectionLoop 58s linear infinite; will-change: transform; }
+.collect-viewport:hover .collect-track,
+.collect-viewport:focus-within .collect-track { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .collect-track { animation: none !important; }
+  .collect-track-group[aria-hidden="true"] { display: none; }
+  .collect-viewport { overflow-x: auto; scrollbar-width: thin; }
+}

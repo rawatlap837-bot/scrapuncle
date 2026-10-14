@@ -2,9 +2,9 @@ import { CalendarCheck, Truck, Banknote } from 'lucide-react'
 import Reveal from './Reveal.jsx'
 
 const steps = [
-  { Icon: CalendarCheck, title: 'Book your pickup', text: 'Call, WhatsApp or fill in the short form. Pick a time that suits you.' },
-  { Icon: Truck, title: 'We collect & weigh', text: 'We arrive at your door and weigh your scrap in front of you.' },
-  { Icon: Banknote, title: 'Get paid instantly', text: 'Approve your quote and receive payment on the spot.' },
+  { Icon: CalendarCheck, title: 'Book Your Pickup', text: 'Call, WhatsApp Or Fill In The Short Form. Pick A Time That Suits You.' },
+  { Icon: Truck, title: 'We Collect & Weigh', text: 'We Arrive At Your Door And Weigh Your Scrap In Front Of You.' },
+  { Icon: Banknote, title: 'Get Paid Instantly', text: 'Approve Your Quote And Receive Payment On The Spot.' },
 ]
 
 export default function HowItWorks() {
@@ -13,9 +13,9 @@ export default function HowItWorks() {
       <div className="gutter mx-auto max-w-[1200px]">
         <Reveal>
           <div className="mx-auto mb-10 max-w-[640px] text-center lg:mb-14">
-            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-accent-hover">How it works</p>
-            <h2 id="how-title" className="h2">Pickup in 3 simple steps</h2>
-            <p className="mt-4 text-text-muted">No shop visits, no hassle. We come to you.</p>
+            <p className="mb-3 text-[13px] font-semibold uppercase tracking-[0.12em] text-accent-hover">How It Works</p>
+            <h2 id="how-title" className="h2">Pickup In 3 Simple Steps</h2>
+            <p className="mt-4 text-text-muted">No Shop Visits, No Hassle. We Come To You.</p>
           </div>
         </Reveal>
         <ol className="pickup-timeline relative grid gap-5 md:grid-cols-3 md:gap-6">
@@ -26,7 +26,6 @@ export default function HowItWorks() {
                 <span className="absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-cta text-sm font-bold text-text-main">{i + 1}</span>
               </span>
               <div className="relative z-10 min-w-0">
-                <p className="text-xs font-bold uppercase tracking-[0.1em] text-accent-hover">Step 0{i + 1}</p>
                 <h3 className="mt-1 text-lg font-bold leading-tight md:text-xl">{title}</h3>
                 <p className="mt-2 text-sm leading-6 text-text-muted md:text-base">{text}</p>
               </div>

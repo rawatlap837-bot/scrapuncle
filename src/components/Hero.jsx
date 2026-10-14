@@ -10,26 +10,26 @@ export default function Hero() {
         <div className="relative grid items-center gap-6 lg:min-h-[440px] lg:grid-cols-[1.15fr_1fr] lg:gap-12">
           <div>
             <p className="fade-up mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.07em] sm:text-xs">
-              <span className="h-2 w-2 rounded-full bg-green-300" /> Doorstep pickup in Delhi NCR
+              <span className="h-2 w-2 rounded-full bg-green-300" /> Doorstep Pickup In Delhi NCR
             </p>
             <h1 id="hero-title" className="fade-up text-[38px] font-bold leading-[1.06] tracking-[-0.04em] sm:text-[52px] lg:text-[60px]">
-              Turn your scrap<br />into <span className="text-[#c9f5a6]">cash.</span>
+              Turn Your Scrap<br />Into <span className="text-[#c9f5a6]">Cash.</span>
             </h1>
             <p className="fade-up mt-4 max-w-[440px] text-[15px] leading-6 sm:mt-6 sm:leading-7 text-green-50/90 sm:text-lg" style={{ animationDelay: '100ms' }}>
-              We collect, weigh and pay at your doorstep. Clear your space without the hassle.
+              Give Old Items A Greener Second Life. Responsible Recycling Helps Conserve Resources And Keep Reusable Materials Out Of Landfills.
             </p>
             <div className="fade-up mt-6 flex flex-col gap-2 sm:mt-8 sm:flex-row sm:flex-wrap sm:items-center sm:gap-3" style={{ animationDelay: '200ms' }}>
-              <Button variant="cta" href="#contact" className="w-full !px-5 sm:w-auto">Book free pickup <ArrowRight aria-hidden="true" size={18} /></Button>
-              <a href="#how-it-works" className="inline-flex min-h-[44px] items-center justify-center gap-2 rounded-full px-3 text-sm font-semibold text-green-50 hover:bg-white/10">How it works <ArrowRight aria-hidden="true" size={16} /></a>
+              <Button variant="cta" href="#contact" className="w-full !px-5 sm:w-auto">Book Free Pickup <ArrowRight aria-hidden="true" size={18} /></Button>
+              <a href="#how-it-works" className="inline-flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 text-sm font-semibold text-green-50 transition hover:bg-white/20 sm:w-auto">How It Works <ArrowRight aria-hidden="true" size={16} /></a>
             </div>
-            <ul className="fade-up mt-4 flex flex-wrap gap-x-4 gap-y-2 border-t border-white/15 pt-4 text-[11px] sm:mt-7 font-medium text-green-100 sm:text-sm" style={{ animationDelay: '300ms' }}>
-              {['Free pickup', 'Digital weighing', 'Instant payment'].map(item => <li key={item} className="inline-flex items-center gap-1.5"><Check aria-hidden="true" size={16} className="text-green-300" />{item}</li>)}
+            <ul className="fade-up mt-4 flex flex-nowrap gap-1 text-[8px] font-medium text-green-50 min-[360px]:text-[9px] sm:mt-7 sm:flex-wrap sm:gap-2 sm:text-xs" style={{ animationDelay: '300ms' }}>
+              {['Free Visit', 'Free Pickup', 'Instant Payment'].map(item => <li key={item} className="inline-flex shrink-0 items-center gap-1 rounded-full border border-white/25 bg-white/10 px-1.5 py-1 min-[360px]:px-2 sm:gap-1.5 sm:px-3 sm:py-2"><Check aria-hidden="true" size={12} className="text-green-300 sm:h-[15px] sm:w-[15px]" />{item}</li>)}
             </ul>
           </div>
           <div className="relative mx-auto w-full max-w-[410px]">
             <div className="relative rounded-[24px] border border-white/20 bg-white/10 p-2 sm:rounded-[32px] shadow-[0_20px_70px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:p-7">
               <div className="hidden items-center justify-between gap-3 text-xs font-semibold text-green-100 sm:flex">
-                <span className="inline-flex items-center gap-2"><Recycle aria-hidden="true" size={18} /> A fresh start for your scrap</span>
+                <span className="inline-flex items-center gap-2"><Recycle aria-hidden="true" size={18} /> A Fresh Start For Your Scrap</span>
                 <Leaf aria-hidden="true" size={20} />
               </div>
               <div aria-hidden="true" className="relative hidden h-[220px] items-center justify-center sm:flex">
@@ -40,9 +40,9 @@ export default function Hero() {
               <div className="rounded-2xl bg-white p-4 text-text-main sm:p-5">
                 <div className="flex items-center gap-3">
                   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent-hover"><Scale aria-hidden="true" size={23} /></span>
-                  <div><p className="text-sm font-bold">Weighed right in front of you</p><p className="mt-1 text-xs leading-5 text-text-muted">A clear quote. You decide before we collect.</p></div>
+                  <div><p className="text-sm font-bold">Weighed Right In Front Of You</p><p className="mt-1 text-xs leading-5 text-text-muted">A Clear Quote. You Decide Before We Collect.</p></div>
                 </div>
-                <div className="mt-4 flex items-center gap-2 border-t border-line pt-3 text-xs font-semibold text-accent-hover"><Banknote aria-hidden="true" size={18} /> Payment on the spot</div>
+                <div className="mt-4 flex items-center gap-2 border-t border-line pt-3 text-xs font-semibold text-accent-hover"><Banknote aria-hidden="true" size={18} /> Payment On The Spot</div>
               </div>
             </div>
           </div>
