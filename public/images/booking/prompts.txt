@@ -1,0 +1,5 @@
+﻿Generated with the built-in image_gen tool.
+
+Electrical image prompt: Use case: product-mockup. Create a square website category selection photo of old electrical household items for scrap recycling: an old table fan, small toaster and obsolete radio, arranged together centrally, realistic clean catalog photography, pale mint green seamless background, soft studio lighting, all items fully visible with generous margins. No words, no logos, no borders. Save output for use as a website asset.
+
+Paper image prompt: Use case: product-mockup. Square website category selection photograph: a neat bundle of old newspapers tied with jute twine, several used books and folded cardboard for recycling. Centered with generous margins on pale mint green seamless background. Realistic clean catalog photography, soft studio lighting, no legible words, no logos, no borders.

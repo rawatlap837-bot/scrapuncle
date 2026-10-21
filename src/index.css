@@ -2,6 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+.booking-dialog { width: min(520px, calc(100% - 24px)); max-height: calc(100dvh - 24px); margin: auto; padding: 0; border: 0; border-radius: 26px; overflow-y: auto; overscroll-behavior: contain; color: var(--text-main); box-shadow: 0 30px 100px #052e1633; }
+.booking-dialog::backdrop { background: #071c14a6; backdrop-filter: blur(5px); }
+body:has(.booking-dialog[open]) { overflow: hidden; }
+.booking-panel { position: relative; background: white; }
+.booking-header { padding: 28px 60px 24px 24px; background: linear-gradient(135deg, #e6f6e9, #f7fbf7); }
+.booking-form { padding: 22px 24px 24px; }
+.booking-option { position: relative; min-width: 0; cursor: pointer; }
+.booking-option-content { position: relative; display: block; height: 100%; overflow: hidden; border: 2px solid #e6e9e6; border-radius: 16px; transition: border-color 150ms, background 150ms; }
+.booking-option input:checked + .booking-option-content { border-color: #15803d; background: #f0faf2; }
+.booking-option input:focus-visible + .booking-option-content { outline: 3px solid #16a34a66; outline-offset: 3px; }
+.booking-check { position: absolute; top: 9px; right: 9px; display: grid; place-items: center; height: 22px; width: 22px; border-radius: 50%; background: white; border: 1px solid #c6d7ca; color: transparent; }
+.booking-option input:checked + .booking-option-content .booking-check { color: white; background: #15803d; border-color: #15803d; }
+@media (max-width: 400px) {
+  .booking-header { padding: 22px 56px 20px 20px; }
+  .booking-header h2 { font-size: 25px; }
+  .booking-form { padding: 18px 20px 22px; }
+}
+
 :root {
   --bg-base: #FFFFFF;
   --page-backdrop: #E6F2EA;
@@ -100,6 +118,43 @@ a, button, input, select, textarea { font-family: inherit; }
 .img-zoom img { transition: transform 500ms ease-out; }
 .group:hover .img-zoom img { transform: scale(1.05); }
 
+@media (max-width: 639px) {
+  #why-us {
+    padding-top: 48px;
+    padding-bottom: 54px;
+    background:
+      radial-gradient(ellipse at 100% 0%, rgba(198, 236, 207, .78), transparent 42%),
+      linear-gradient(180deg, #f1f7f2 0%, #f8faf8 100%);
+  }
+  #why-us .why-inner { padding-left: 22px; padding-right: 22px; }
+  #why-us .why-heading { margin-bottom: 25px; max-width: 340px; text-align: left; }
+  #why-us .why-eyebrow { margin-bottom: 14px; padding: 8px 12px; font-size: 10px; letter-spacing: .14em; }
+  #why-us .h2 { max-width: 320px; font-size: 32px; line-height: 1.06; letter-spacing: -.045em; }
+  #why-us .why-intro { max-width: 280px; margin: 10px 0 0; color: #657269; font-size: 14px; line-height: 1.45; }
+  #why-us .why-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 12px; row-gap: 14px; align-items: stretch; }
+  #why-us .why-card {
+    min-width: 0;
+    min-height: 154px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 15px 13px;
+    border-color: rgba(255,255,255,.95);
+    border-radius: 19px;
+    background: rgba(255,255,255,.88);
+    box-shadow: 0 8px 24px rgba(28, 63, 38, .065);
+  }
+  #why-us .why-card:nth-child(2), #why-us .why-card:nth-child(5),
+  #why-us .why-card:nth-child(2).is-in, #why-us .why-card:nth-child(5).is-in { transform: none; }
+  #why-us .why-card-wash { top: auto; right: -26px; bottom: -42px; width: 100px; height: 100px; background: #eff9f1; }
+  #why-us .why-icon { width: 43px; height: 43px; border-radius: 14px; background: #e6f4e9; }
+  #why-us .why-icon svg { width: 21px; height: 21px; }
+  #why-us .why-card h3 { z-index: 1; width: 100%; max-width: none; font-size: 14px; line-height: 1.25; letter-spacing: -.025em; overflow-wrap: anywhere; }
+  #why-us .why-number { display: block; position: absolute; right: 13px; top: 13px; color: #9cb7a2; font-size: 10px; letter-spacing: .06em; }
+  #why-us .why-card:nth-child(1), #why-us .why-card:nth-child(4) { background: #fff; }
+}
+
 @keyframes collectionLoop {
   to { transform: translateX(-50%); }
 }
@@ -108,7 +163,8 @@ a, button, input, select, textarea { font-family: inherit; }
   overflow-y: hidden;
   scrollbar-width: none;
   -webkit-overflow-scrolling: touch;
-  touch-action: pan-x;
+  /* Allow vertical page swipes as well as horizontal carousel browsing. */
+  touch-action: pan-x pan-y pinch-zoom;
 }
 .collect-viewport::-webkit-scrollbar { display: none; }
 .collect-track { animation: collectionLoop 58s linear infinite; will-change: transform; }
