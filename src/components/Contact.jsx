@@ -4,8 +4,12 @@ import Field from './ui/Input.jsx'
 import Button from './ui/Button.jsx'
 
 const types = [
-  { value: 'Old electrical items', image: '/images/booking/electrical.png', detail: 'Appliances & electronics' },
-  { value: 'Paper', image: '/images/booking/paper.png', detail: 'Newspapers, books & cartons' },
+  { value: 'Paper & Raddi', image: '/images/booking/paper.png', detail: 'Newspapers, books & cartons' },
+  { value: 'Electronic Scrap', image: '/images/collect/computer.jpg', detail: 'Computers & old electronics' },
+  { value: 'Home Appliances', image: '/images/booking/electrical.png', detail: 'Fans, fridges & household items' },
+  { value: 'Metal Scrap', image: '/images/collect/iron-steel.svg', detail: 'Iron, steel, copper & aluminium' },
+  { value: 'Plastic Scrap', image: '/images/collect/plastic.svg', detail: 'Bottles, containers & plastic items' },
+  { value: 'Batteries & Cables', image: '/images/collect/battery.jpg', detail: 'Used batteries, wires & cables' },
 ]
 
 const pickupSlots = ['8 AM – 10 AM', '10 AM – 12 PM', '12 PM – 2 PM', '2 PM – 4 PM', '4 PM – 6 PM', '6 PM – 7 PM']
