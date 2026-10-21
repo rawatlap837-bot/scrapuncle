@@ -2,6 +2,7 @@ import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import HowItWorks from './components/HowItWorks.jsx'
 import WhyChoose from './components/WhyChoose.jsx'
+import Comparison from './components/Comparison.jsx'
 import MeetTheKabadi from './components/MeetTheKabadi.jsx'
 import Services from './components/Services.jsx'
 import Testimonials from './components/Testimonials.jsx'
@@ -23,6 +24,7 @@ export default function App() {
           <Hero />
           <HowItWorks />
           <WhyChoose />
+          <Comparison />
           <MeetTheKabadi />
           <Services />
           <Testimonials />
