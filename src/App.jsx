@@ -25,8 +25,8 @@ export default function App() {
           <HowItWorks />
           <WhyChoose />
           <Comparison />
-          <MeetTheKabadi />
           <Services />
+          <MeetTheKabadi />
           <Testimonials />
           <Faq />
           <Cta />

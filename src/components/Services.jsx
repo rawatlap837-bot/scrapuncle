@@ -15,7 +15,7 @@ const items = [
 
 function CollectionCards() {
   return items.map(({ slug, title, text, eco }) => (
-    <li key={slug} className="collect-slide w-[min(82vw,320px)] shrink-0 sm:w-[min(42vw,340px)] lg:w-[340px]">
+    <li key={slug} className="collect-slide w-[min(75vw,320px)] shrink-0 sm:w-[min(42vw,340px)] lg:w-[340px]">
       <article className="group flex h-full flex-col overflow-hidden rounded-card bg-surface-alt transition duration-[250ms] ease-out hover:-translate-y-1 hover:shadow-lg2">
         <div className="img-zoom relative aspect-[3/2] overflow-hidden bg-sky-tint">
           <img
