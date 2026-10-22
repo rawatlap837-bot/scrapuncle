@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Recycle, ShieldCheck } from 'lucide-react'
+import { ArrowRight, Check, CircleHelp, Recycle, ShieldCheck } from 'lucide-react'
 import Reveal from './Reveal.jsx'
 import Button from './ui/Button.jsx'
 
@@ -37,7 +37,7 @@ export default function Comparison() {
                   <tr key={row.label}>
                     <th scope="row">{row.label}</th>
                     <td className="comparison-ours"><span className="flex items-start gap-2"><Check size={17} className="mt-0.5 shrink-0 text-accent-hover" aria-hidden="true" /><span>{row.ours}</span></span></td>
-                    <td>{row.other}</td>
+                    <td className="comparison-other"><span className="flex items-start gap-2"><CircleHelp size={22} className="mt-0.5 shrink-0 text-[#8a7040]" aria-hidden="true" /><span>{row.other}</span></span></td>
                   </tr>
                 ))}
               </tbody>
