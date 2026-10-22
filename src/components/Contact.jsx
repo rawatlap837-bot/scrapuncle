@@ -14,6 +14,26 @@ const types = [
 
 const pickupSlots = ['8 AM – 10 AM', '10 AM – 12 PM', '12 PM – 2 PM', '2 PM – 4 PM', '4 PM – 6 PM', '6 PM – 7 PM']
 const bookingScriptUrl = 'https://script.google.com/macros/s/AKfycbyLCp17jn017Fkua_K7tj_iaKB5GnTUyWvSggXyLNFW_Bn8xM13FT8E4qlhjhKNLoU3/exec'
+let callbackNumber = 0
+const checkBooking = requestId => new Promise((resolve, reject) => {
+  const callback = `pickupResult_${Date.now()}_${++callbackNumber}`
+  const script = document.createElement('script')
+  const url = new URL(bookingScriptUrl)
+  url.searchParams.set('requestId', requestId)
+  url.searchParams.set('callback', callback)
+  url.searchParams.set('_', String(Date.now()))
+  let timer
+  const cleanup = () => {
+    clearTimeout(timer)
+    script.remove()
+    delete window[callback]
+  }
+  window[callback] = result => { cleanup(); resolve(result) }
+  script.onerror = () => { cleanup(); reject(new Error('Google Sheets is running older booking code. Deploy the latest Code.gs as a new web app version.')) }
+  timer = setTimeout(() => { cleanup(); reject(new Error('Google Sheets did not confirm the booking. Deploy the latest Code.gs and check its Executions log.')) }, 10000)
+  script.src = url.toString()
+  document.head.appendChild(script)
+})
 const todayInIndia = () => {
   const parts = new Intl.DateTimeFormat('en-GB', {
     timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit',
@@ -90,12 +110,17 @@ export default function Contact() {
     setSaveError('')
     setWhatsAppFallbackUrl('')
     try {
+      const requestId = crypto.randomUUID()
       await fetch(bookingScriptUrl, {
         method: 'POST',
         mode: 'no-cors',
         headers: { 'Content-Type': 'text/plain;charset=UTF-8' },
-        body: JSON.stringify({ ...values, name: values.name.trim(), phone, area: values.area.trim(), message: values.message.trim() }),
+        body: JSON.stringify({ ...values, requestId, name: values.name.trim(), phone, area: values.area.trim(), message: values.message.trim() }),
       })
+      const confirmation = await checkBooking(requestId)
+      if (confirmation.status !== 'ok' || !confirmation.saved) {
+        throw new Error(confirmation.message || 'Google Sheets did not save this request. Check the Apps Script deployment and sheet ID.')
+      }
       setWhatsAppUrl(whatsAppLink)
     } catch (error) {
       setSaveError(error.message || 'Could not send the pickup request. Please try again.')
@@ -124,8 +149,8 @@ export default function Contact() {
           {whatsAppUrl ? (
             <div className="booking-form text-center" role="status">
               <span className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-[#e6f5e9] text-accent-hover"><Check size={28} aria-hidden="true" /></span>
-              <h3 className="text-xl font-bold">Pickup request sent</h3>
-              <p className="mb-6 mt-2 text-sm text-text-muted">Please send us a WhatsApp message to confirm that we received your request and arrange your preferred slot.</p>
+              <h3 className="text-xl font-bold">Pickup request saved</h3>
+              <p className="mb-6 mt-2 text-sm text-text-muted">Your details are in the booking sheet. Send us a WhatsApp message to arrange your preferred slot.</p>
               <Button href={whatsAppUrl} target="_blank" rel="noopener noreferrer" variant="accent" className="w-full">Continue on WhatsApp <ArrowRight size={18} aria-hidden="true" /></Button>
             </div>
           ) : <form onSubmit={submit} noValidate className="booking-form">
