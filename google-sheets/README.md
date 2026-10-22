@@ -10,4 +10,4 @@ The website checks taken times through `/api/availability` and disables them in 
 
 If you already deployed the earlier version of `Code.gs`, paste the updated code and choose **Deploy → Manage deployments → Edit → New version → Deploy**. The old deployment version will not check availability or prevent duplicate slots.
 
-Use `vercel dev` if you want to try the full submission flow locally. Plain `npm run dev` serves only the Vite frontend, so `/api/booking` is unavailable there. Until the secret is configured, the form reports that storage is unavailable and does not claim a booking was saved.
+For local development, copy `.env.example` to `.env.local`, set `GOOGLE_SHEETS_SECRET` to the same value as the Apps Script `BOOKING_SECRET` property, and restart `npm run dev`. Vite serves the booking and availability API routes locally. `.env.local` is ignored by Git. Without the matching secret, the form shows a setup error and does not claim that a booking was saved.

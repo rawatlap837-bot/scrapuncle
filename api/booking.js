@@ -19,9 +19,11 @@ export default async function handler(request, response) {
   }
 
   const { name, phone, types, area, date, slot, message = '' } = request.body || {}
-  const today = new Intl.DateTimeFormat('en-CA', {
+  const dateParts = new Intl.DateTimeFormat('en-GB', {
     timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit',
-  }).format(new Date())
+  }).formatToParts(new Date())
+  const part = type => dateParts.find(item => item.type === type).value
+  const today = `${part('year')}-${part('month')}-${part('day')}`
   if (
     typeof name !== 'string' || name.trim().length < 2 || name.length > 80 ||
     typeof phone !== 'string' || !/^(?:\+91|91)?[6-9]\d{9}$/.test(phone.replace(/[\s()-]/g, '')) ||
