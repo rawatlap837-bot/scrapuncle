@@ -11,11 +11,11 @@ export default function MeetTheKabadi() {
             <div aria-hidden="true" className="absolute -bottom-24 -left-12 h-56 w-56 rounded-full bg-white/10" />
             <div className="relative w-full max-w-[360px] overflow-hidden rounded-[24px] border border-white/20 shadow-xl">
               <img
-                src="/images/SohilAlvi.png"
+                src="/photo.png"
                 alt="Sohil Alvi"
                 className="h-[280px] w-full object-cover object-top sm:h-[320px]"
-                width="1060"
-                height="1500"
+                width="929"
+                height="945"
                 loading="lazy"
               />
             </div>

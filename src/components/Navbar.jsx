@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Menu, X, Recycle, Phone } from 'lucide-react'
+import { Menu, X, Phone } from 'lucide-react'
 import Button from './ui/Button.jsx'
 
 const links = [
@@ -23,9 +23,8 @@ export default function Navbar() {
   return (
     <header className={`sticky top-0 z-50 transition duration-200 ${scrolled ? 'bg-white shadow-sm2' : 'bg-transparent'}`}>
       <nav aria-label="Main" className="gutter relative mx-auto flex h-16 max-w-[1200px] items-center justify-between md:h-[72px]">
-        <a href="#top" className="flex min-h-[44px] items-center gap-2 text-lg font-bold">
-          <Recycle aria-hidden="true" size={24} className="text-success" />
-          <span className="whitespace-nowrap text-base sm:text-lg">Kabadi Wale Uncle</span>
+        <a href="#top" aria-label="Kabadi Wale Uncle home" className="flex min-h-[44px] items-center">
+          <img src="/logo.png" alt="Kabadi Wale Uncle" width="1254" height="996" className="h-12 w-auto object-contain sm:h-14" />
         </a>
         <ul className="hidden items-center gap-10 nav:flex">
           {links.map((l) => (

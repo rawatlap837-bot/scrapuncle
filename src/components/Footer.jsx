@@ -1,11 +1,9 @@
-import { Recycle } from 'lucide-react'
-
 export default function Footer() {
   return (
     <footer className="gutter border-t border-line bg-white pb-24 pt-14 md:pb-10">
       <div className="mx-auto grid max-w-[1200px] gap-10 sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <p className="flex items-center gap-2 text-lg font-bold"><Recycle aria-hidden="true" size={24} className="shrink-0 text-success" /><span className="whitespace-nowrap">Kabadi Wale Uncle</span></p>
+          <a href="#top" aria-label="Kabadi Wale Uncle home" className="inline-flex min-h-[44px] items-center"><img src="/logo.png" alt="Kabadi Wale Uncle" width="1254" height="996" className="h-20 w-auto object-contain" /></a>
           <p className="mt-3 text-text-muted">Turn Your Scrap Into Cash Today. Free Doorstep Pickup.</p>
         </div>
         <div>

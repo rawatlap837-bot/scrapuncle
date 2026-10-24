@@ -37,13 +37,13 @@ export default function Hero() {
                 <div className="absolute h-28 w-28 rounded-full bg-[#c9f5a6]/10 sm:h-36 sm:w-36" />
                 <Truck className="drift relative h-24 w-24 text-[#c9f5a6] sm:h-28 sm:w-28" strokeWidth={1.5} />
               </div>
-              <div className="overflow-hidden rounded-2xl border border-white/20 bg-white/10">
+              <div className="flex h-[300px] items-end justify-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 sm:h-[340px]">
                 <img
-                  src="/images/SohilAlvi.png"
-                  alt="Sohil Alvi"
-                  className="h-[240px] w-full object-cover object-top sm:h-[280px]"
-                  width="1060"
-                  height="1500"
+                  src="/logo.png"
+                  alt="Kabadi Wale Uncle logo"
+                  className="h-full w-full object-contain object-bottom"
+                  width="1254"
+                  height="996"
                 />
               </div>
             </div>
