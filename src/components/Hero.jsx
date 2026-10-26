@@ -7,7 +7,7 @@ export default function Hero() {
       <div className="hero-green relative isolate overflow-hidden rounded-[28px] px-5 py-7 text-white sm:rounded-hero sm:p-10 lg:p-14">
         <div aria-hidden="true" className="pointer-events-none absolute -right-36 -top-36 h-[520px] w-[520px] rounded-full border-[70px] border-white/5" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-64 left-1/3 h-[460px] w-[460px] rounded-full bg-white/5" />
-        <div className="relative grid items-center gap-6 lg:min-h-[440px] lg:grid-cols-[1.15fr_1fr] lg:gap-12">
+        <div className="relative grid items-end gap-6 lg:min-h-[440px] lg:grid-cols-[1.15fr_1fr] lg:gap-12">
           <div>
             <p className="fade-up mb-5 inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-2 text-[10px] font-bold uppercase tracking-[0.07em] sm:text-xs">
               <span className="h-2 w-2 rounded-full bg-green-300" /> Doorstep Pickup In Delhi NCR
@@ -26,8 +26,8 @@ export default function Hero() {
               {['Free Visit', 'Free Pickup', 'Instant Payment'].map(item => <li key={item} className="inline-flex shrink-0 items-center gap-1 rounded-full border border-white/25 bg-white/10 px-1.5 py-1 min-[360px]:px-2 sm:gap-1.5 sm:px-3 sm:py-2"><Check aria-hidden="true" size={12} className="text-green-300 sm:h-[15px] sm:w-[15px]" />{item}</li>)}
             </ul>
           </div>
-          <div className="relative mx-auto w-full max-w-[410px]">
-            <div className="relative rounded-[24px] border border-white/20 bg-white/10 p-2 sm:rounded-[32px] shadow-[0_20px_70px_rgba(0,0,0,0.12)] backdrop-blur-sm sm:p-7">
+          <div className="relative mx-auto -mb-7 w-full max-w-[500px] sm:-mb-10 lg:-mb-14">
+            <div className="relative">
               <div className="hidden items-center justify-between gap-3 text-xs font-semibold text-green-100 sm:flex">
                 <span className="inline-flex items-center gap-2"><Recycle aria-hidden="true" size={18} /> A Fresh Start For Your Scrap</span>
                 <Leaf aria-hidden="true" size={20} />
@@ -37,11 +37,11 @@ export default function Hero() {
                 <div className="absolute h-28 w-28 rounded-full bg-[#c9f5a6]/10 sm:h-36 sm:w-36" />
                 <Truck className="drift relative h-24 w-24 text-[#c9f5a6] sm:h-28 sm:w-28" strokeWidth={1.5} />
               </div>
-              <div className="flex h-[300px] items-end justify-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 sm:h-[340px]">
+              <div className="flex items-center justify-center">
                 <img
                   src="/logo.png"
                   alt="Kabadi Wale Uncle logo"
-                  className="h-full w-full object-contain object-bottom"
+                  className="block h-auto w-full object-contain"
                   width="1254"
                   height="996"
                 />
